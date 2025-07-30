@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마이페이지 | Pickup Basketball</title>
+  <link rel="stylesheet" href="css/mypage.css">
+  <script src="js/mypage.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>🏀 Pickup Basketball</h1>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="#" id="logout">로그아웃</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="mypage-container">
+    <h2 id="greeting">👤 마이페이지</h2>
+
+    <section class="profile-section">
+      <h3>프로필 정보</h3>
+      <form id="profileForm">
+        <input type="text" id="nickname" placeholder="이름" required />
+        <input type="number" id="height" placeholder="키(cm)" />
+        <input type="text" id="position" placeholder="포지션 (예: PG, SG, C...)" />
+        <button type="submit">프로필 저장</button>
+      </form>
+      <div id="savedProfile" class="profile-display"></div>
+    </section>
+
+    <section class="reservation-section">
+      <div class="section-header">
+        <h3>📅 예약 내역</h3>
+        <select id="reservationFilter">
+          <option value="all">전체</option>
+          <option value="upcoming">예정</option>
+          <option value="completed">완료</option>
+          <option value="cancelled">취소</option>
+        </select>
+      </div>
+      <div id="reservationList"></div>
+    </section>
+
+
+    <section class="guest-history-section">
+      <div class="section-header">
+          <h3>🙋 게스트 신청 현황</h3>
+      </div>
+      <div id="guestList"></div>
+    </section>
+
+    <section class="account-settings">
+      <h3>⚙️ 계정 설정</h3>
+      <form id="passwordChangeForm">
+        <input type="password" id="currentPw" placeholder="현재 비밀번호" required />
+        <input type="password" id="newPw" placeholder="새 비밀번호" required />
+        <button type="submit">비밀번호 변경</button>
+      </form>
+      <button id="deleteAccount">회원 탈퇴</button>
+    </section>
+  </main>
+</body>
+</html>

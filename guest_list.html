@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>게스트 모집 게시판</title>
+  <link rel="stylesheet" href="css/guest_list.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <script src="js/guset_list.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <h1>🏀 Pickup Basketball</h1>
+  <nav class="main-nav">  
+    <ul>
+      <li><a href="index.html">홈</a></li>
+      <li><a href="reservation.html">예약</a></li>
+      <li><a href="mypage.html">마이페이지</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="write-section">
+  <h2>[모집글 작성]</h2>
+  <form>
+    <input type="text" placeholder="장소 (ex. 부산 XX체육관)" required />
+    <input type="text" placeholder="시간 (ex. 6월 13일 오후 2시)" required />
+    <input type="number" placeholder="모집 인원 (ex. 5)" min="1" required />
+    <textarea rows="4" placeholder="추가 내용 작성해주세요. [게스트 선입금 비용], [입금받을 계좌], [유니폼 색상] [주차 가능 여부]" required></textarea>
+    <button type="submit">등록하기</button>
+  </form>
+</section>
+
+<section class="list-section">
+  <h2>[현재 모집 중인 게임]</h2>
+
+  <div id="card-container">
+    <!-- 새 카드-->
+  </div>
+
+  <div class="guest-card">
+    <div class="meta">📍 장소: 부산 민락 체육관 | 🕒 시간: 6월 15일 오후 7시</div>
+    <div class="description">
+      [ex 1] 슛 연습하실 분 모집합니다! 실력 상관없이 즐겁게 농구하실 분 환영합니다.
+      현재 2/5명 참여중입니다.
+    </div>
+    <div class="actions">
+      <button>참여 신청</button>
+    </div>
+  </div>
+
+  <div class="guest-card">
+    <div class="meta">📍 장소: 서울 마포 체육관 | 🕒 시간: 6월 18일 오후 4시</div>
+    <div class="description">
+      [ex 2] 3:3 게임 구성하려고 합니다. 6명 정원, 포지션 무관하게 모두 환영해요!
+      현재 6/6명 참여중입니다.
+    </div>
+    <div class="actions">
+      <button disabled>마감됨</button>
+    </div>
+  </div>
+
+  
+
+</section>
+
+</body>
+</html>

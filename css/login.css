@@ -1,0 +1,80 @@
+:root { /*css 색상 변수 선언 */
+  --main-color: #FF6B00;     /* 강조색: 버튼, 텍스트용 */
+  --dark-bg: #111;           /* 어두운 배경: 헤더, 푸터 등 */
+  --light-bg: #f9f9f9;       /* 전체 배경 */
+  --text-light: #fff;        /* 밝은 글씨색 */
+}
+
+body {
+  background-color: var(--light-bg);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 300px;
+}
+
+.login-container h1 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  background-color: #FF6B00;
+  color: white;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e55e00;
+}
+
+.signup-link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.signup-link a {
+  color: #FF6B00;
+  text-decoration: none;
+}
+.signup-link a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  button {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>예약하기 | Pickup Basketball</title>
+
+    <!-- 스타일 시트 -->
+    <link rel="stylesheet" href="css/reservation.css" />
+
+    <!-- 카카오맵 SDK -->
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cf3a23d2f40ff89aa54231ff7779e08e"
+    ></script>
+
+    <!-- 예약 스크립트 -->
+    <script src="js/reservation.js" defer></script>
+  </head>
+  <body> 
+    <header class="site-header">
+      <h1>🏀 Pickup Basketball</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="mypage.html">마이페이지</a></li>
+          <li><a href="guest_list.html">게스트 모집</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="reservation-container">
+      <section class="filter-section">
+
+        <section class="gym-list">
+        <h2>[예약 가능한 체육관 리스트]</h2>
+        <div id="gymCards">
+          <!-- JS로 체육관 카드 동적 생성 예정 -->
+        </div>
+      </section>
+
+        <input type="text" id="location" placeholder="지역을 입력하세요 (예: 서울 강남)" />
+        <button id="searchBtn"onclick="handleSearch()">검색</button>
+      </section>
+
+      <section class="map-section">
+        <div id="map" style="width: 50%; height: 400px;"></div>
+        <section class="weather-info">
+            <h3>[날씨 정보]</h3>
+            <p>➡️ 온도: <span id="temperature"></span></p>
+            <p>➡️ 강수량: <span id="precipitation"></span></p>
+            <p>➡️ 강수형태: <span id="pty"></span></p>
+            <p>➡️ 풍속: <span id="wind"></span></p>
+            <p>➡️ 습도: <span id="humidity"></span></p>
+            <p>➡️ 풍향: <span id="wind_direction"></span></p>
+        </section>
+      </section>
+
+      
+
+      
+    </main>
+  </body>
+</html>

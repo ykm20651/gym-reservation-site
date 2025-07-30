@@ -1,0 +1,161 @@
+:root { /*css 색상 변수 선언 */
+  --main-color: #FF6B00;     /* 강조색: 버튼, 텍스트용 */
+  --dark-bg: #111;           /* 어두운 배경: 헤더, 푸터 등 */
+  --light-bg: #f9f9f9;       /* 전체 배경 */
+  --text-light: #fff;        /* 밝은 글씨색 */
+}
+    
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--dark-bg);
+}
+
+.site-header {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: var(--main-color);
+}
+
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background-color: #fae9d9;
+  background-image: url('https://www.transparenttextures.com/patterns/white-wall-3.png');
+}
+
+.hero-text {
+  flex: 1 1 300px;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* hover로 마우스 올리면 색상 바뀌는데, 색이 자연스럽게 바뀌도록 시간부여*/
+}
+
+.cta-button:hover {
+  background-color: #e65b00;
+}
+
+.hero-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  animation: fadeIn 1.5s ease-out;
+}
+
+.quick-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  gap: 2rem;
+}
+
+.menu-item {
+  background-color: #222;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  cursor: pointer; /* 마우스 커서도 손가락 모양으로 바꿔주기.*/
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  background-color: #333;
+}
+
+.menu-item h3 {
+  margin: 0.5rem 0;
+  color: var(--main-color);
+}
+
+.menu-item p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .quick-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+}

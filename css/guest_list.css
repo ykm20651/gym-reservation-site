@@ -1,0 +1,189 @@
+:root { /*css 색상 변수 선언 */
+  --main-color: #FF6B00;     /* 강조색: 버튼, 텍스트용 */
+  --dark-bg: #111;           /* 어두운 배경: 헤더, 푸터 등 */
+  --light-bg: #f9f9f9;       /* 전체 배경 */
+  --text-light: #fff;        /* 밝은 글씨색 */
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--light-bg);
+  background-image: url('https://www.transparenttextures.com/patterns/white-wall-3.png');
+  background-repeat: repeat;
+  color: #2C2C2C;
+}
+
+.site-header {
+  background: var(--dark-bg);
+  color: var(--text-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.site-header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  color: var(--main-color);
+}
+
+.write-section {
+  max-width: 800px;
+  margin: 3rem auto 2rem;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+}
+
+.write-section h2 {
+  font-size: 1.8rem;
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.write-section input,
+.write-section textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.write-section button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background: var(--main-color);
+  color: var(--light-bg);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.write-section button:hover {
+  background: #e45700;
+}
+
+.list-section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.list-section h2 {
+  font-size: 1.6rem;
+  color: #D45C00;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.guest-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.guest-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.guest-card .meta {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.8rem;
+}
+
+.guest-card .description {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.guest-card .actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.guest-card .actions button {
+  background: #FF6B00;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.guest-card .actions button:disabled {
+  background: #bbb;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .write-section,
+  .list-section {
+    padding: 1rem;
+  }
+
+  .guest-card {
+    padding: 1.2rem;
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>체육관 등록하기</title>
+  <link rel="stylesheet" href="css/facility_register.css">
+  <script src="js/facility_register.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>🏀 Pickup Basketball</h1>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="reservation.html">예약</a></li>
+        <li><a href="mypage.html">마이페이지</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="form-container">
+    <form id="registerForm">
+      <h2>[체육관 정보 등록]</h2>
+
+      <label for="name">체육관 이름</label>
+      <input type="text" id="name" required>
+
+      <label for="address">주소</label>
+      <input type="text" id="address" required>
+
+      <label for="price">이용 가격 (예: 30000원 / 1시간)</label>
+      <input type="text" id="price" required>
+
+      <label for="time">운영 시간 (예: 18:00 ~ 22:00)</label>
+      <input type="text" id="time" required>
+
+      <button type="submit">등록하기</button>
+    </form>
+  </main>
+
+  
+</body>
+</html>

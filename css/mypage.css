@@ -1,0 +1,287 @@
+:root { /*css 색상 변수 선언 */
+  --main-color: #FF6B00;     /* 강조색: 버튼, 텍스트용 */
+  --dark-bg: #111;           /* 어두운 배경: 헤더, 푸터 등 */
+  --light-bg: #f9f9f9;       /* 전체 배경 */
+  --text-light: #fff;        /* 밝은 글씨색 */
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--light-bg);
+  color: #333;
+}
+
+.site-header {
+  background-color: #111;
+  color: var(--text-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.site-header h1 { font-size: 1.5rem; }
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0; padding: 0;
+}
+.main-nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+}
+.main-nav a:hover { color: #FF6B00; }
+
+.mypage-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #222;
+  font-size: 1.3rem;
+}
+
+
+
+form input, form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+form button,
+#deleteAccount {
+  background-color: #FF6B00;
+  color: var(--text-light);
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  width: 100%;
+}
+form button:hover,
+#deleteAccount:hover { background-color: #e85c00; }
+
+.profile-display {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+  white-space: pre-line;
+}
+.account-settings form button {
+  margin-bottom: 10px;
+}
+
+
+
+#reservationList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+
+
+.reservation-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.reservation-card h4 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  color: #222;
+}
+
+
+
+.reservation-card .reservation-details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1rem;
+}
+.reservation-card .reservation-details label {
+  font-weight: bold;
+  color: #444;
+}
+.reservation-card .reservation-details span {
+  color: #555;
+}
+
+
+
+.reservation-card .action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.reservation-card .action-buttons button {
+  flex: 1;
+  min-width: 100px;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+
+.reservation-section .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+
+#reservationFilter {
+  width: 120px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path fill='%23666' d='M0 0l5 6 5-6z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+}
+
+#reservationFilter:focus {
+  outline: none;
+  border-color: #FF6B00;
+  box-shadow: 0 0 0 2px rgba(255,107,0,0.2);
+}
+
+.btn-complete {
+  background-color: #A8E6CF; 
+  color: #2E7D32;
+}
+.btn-complete:hover {
+  background-color: #8ED3B4;
+}
+
+.btn-cancel {
+  background-color: #FFD3B6; 
+  color: #BF360C;
+}
+.btn-cancel:hover {
+  background-color: #FFB58C;
+}
+
+.btn-delete {
+  background-color: #FFAAA5; 
+  color: #C62828;
+}
+.btn-delete:hover {
+  background-color: #FF8C82;
+}
+
+.btn-guest {
+  background-color: #DCEAFF; 
+  color: #01579B;
+}
+.btn-guest:hover {
+  background-color: #B0D4FF;
+}
+
+
+
+#guestList {
+  display: grid;
+  gap: 1.2rem;
+}
+
+#guestList .guest-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+#guestList .guest-card h4 {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+#guestList .guest-details {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+#guestList .guest-details div {
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .mypage-container {
+    padding: 0 0.5rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  form input,
+  form button,
+  #deleteAccount {
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .reservation-card,
+  #guestList .guest-card {
+    padding: 1rem;
+  }
+
+  .reservation-card .reservation-details {
+    grid-template-columns: 1fr;
+    row-gap: 0.5rem;
+  }
+
+  .reservation-card .action-buttons {
+    flex-direction: column;
+  }
+
+  .reservation-card .action-buttons button {
+    width: 100%;
+  }
+}
